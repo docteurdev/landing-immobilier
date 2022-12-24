@@ -11,7 +11,8 @@ module.exports = {
         'yellow-light': '#FFF0CB',
         'muted':'#606060',
         'gray': '#323232',
-        'gray-light': '#4A4A4A'
+        'gray-light': '#4A4A4A',
+        'gray-light-sm': '#dcdcdc57'
       },
       fontSize: {
         // 'sm': '0.8rem',
@@ -24,5 +25,5 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }

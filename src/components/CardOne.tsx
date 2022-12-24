@@ -1,21 +1,46 @@
 import React from 'react';
 import { FaChevronRight } from "react-icons/fa";
-import { moreId1 } from '../assets'
+import { moreId1 } from '../assets';
+import {motion} from "framer-motion";
+import ProductDetail from './ProductDetail';
+import { CardType } from '../comon/types';
+import { useDispatch } from 'react-redux';
+import { selectProduct } from '../store/slices/product';
 
-function CardOne() {
+
+
+const CardOne: React.FC<CardType>= ({produit}) =>{
+  const {image, productName, prix,}= produit
+
+  const dispatch= useDispatch()
+
+  const showInfo= (produit:any) =>{
+    dispatch(selectProduct(produit))
+    document.getElementById('my-modal')?.click()
+  }
+    
   return (
-    <div className='card-one w-[370px] h-[547px] shadow-xl'>
-     <div className="w-full h-[414px]">
-        <img src={moreId1} className="" alt="" />
+    <div>
+    <motion.div 
+    onClick={() =>showInfo(produit) }
+    className='card-one w-[280px] h-[350px] shadow-xl'>
+     <div className="w-full h-5/6">
+        <img src={image} className="" alt="" />
      </div>
-     <div className="bottom-block flex justify-center items-center w-full h-[133px] bg-white">
-        <div className="bx-rounded bg-yellow w-8 h-8 rounded-full flex justify-center items-center shadow-xl mr-3">
+     <div
+     className="bottom-block px-4 flex justify-start items-center w-full h-1/6 bg-white">
+        <div className="bx-rounded cursor-pointer bg-yellow w-8 h-8 rounded-full flex justify-center items-center shadow-xl mr-3">
             <FaChevronRight/>
         </div>
-        <h4 className='text-[14px] font-bold' >Same great quality, New lower prices</h4>
+        <div>
+         <h4 className='text-[14px] font-bold' > {productName} </h4>
+         <h4 className='text-[14px] font-bold' >{prix}</h4>
+
+        </div>
     </div>
+    </motion.div>
     </div>
   )
 }
 
-export default CardOne
+export default  React.memo(CardOne)
