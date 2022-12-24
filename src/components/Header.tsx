@@ -71,12 +71,12 @@ function Header() {
         </div>
 
         <div className="filter-section relative  w-full md:w-3/6 md:h-auto">
-          <div className='w-20 h-20 bg-slate-400 rounded-full absolute top-[8rem] left-[8rem] overflow-hidden'>
+          {/* <div className='w-20 h-20 bg-slate-400 rounded-full absolute top-[8rem] left-[8rem] overflow-hidden'>
             <img className='w-full h-full object-cover' src={coran1} alt="" />
-          </div>
-          <div className='w-[6rem] h-[6rem] bg-slate-400 rounded-full absolute top-[3rem] right-[8rem] overflow-hidden'>
+          </div> */}
+          {/* <div className='w-[6rem] h-[6rem] bg-slate-400 rounded-full absolute top-[3rem] right-[8rem] overflow-hidden'>
             <img className='w-full h-full object-cover' src={coran2} alt="" />
-          </div>
+          </div> */}
           <div className='w-[9rem] h-[2.5rem] shadow-lg bg-blue rounded-lg absolute top-[10rem] right-[4rem] px-2 font-bold text-white flex justify-start gap-4 items-center'> <AiFillCalendar/> <h5>7 jours / 7</h5> </div>
           <img src={banner} className="w-full h-[400px] object-contain z-30" alt="" />
         </div>
