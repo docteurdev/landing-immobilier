@@ -24,7 +24,7 @@ function Header() {
            <MdOutlineClose onClick={() => setMenu(false)} />
         </IconContext.Provider>
       </div>: null}
-        <nav className='w-full fixed top-0 left-0 md:px-[7rem]  backdrop-blur-2xl flex justify-between items-center h-[70px] z-30 shadow-'>
+        <nav className='w-full fixed top-0 left-0 h-[50px] md:px-[7rem] md:h-[70px] backdrop-blur-2xl flex justify-between items-center  z-30 shadow-'>
           <div className="nav flex justify-between items-center w-full">
           {/* <h4 className='text-blue font-normal md:text-2xl'>House<span className='text-yellow' >Sale</span> </h4> */}
           <img src={logoroqya} className="w-[10rem] h-[6rem] object-contain" alt="" />
@@ -36,32 +36,34 @@ function Header() {
           </ul>
             <a href="#start" className='bg-blue text-white px-6 py-2 rounded-full font-semibold'>Commander</a>
           </div>
-          <div className="lg:hidden text-blue text-[37px]">
+          <div className="lg:hidden text-blue ml-4">
+          <IconContext.Provider value={{className:"text-[25px]"}}>
 
           <HiMenu onClick={() => {
             document.getElementById('my-mobile-modal')?.click()
           } } />
+          </IconContext.Provider>
           </div>
         </nav>
         {/* <Btns/> */}
-        <div className="flex  pt-[7rem] flex-col md:flex-row px-4 md:px-[7rem]">
+        <div className="flex  pt-[4rem] flex-col md:flex-row px-4 md:mt-5 md:px-[7rem]">
         <div className="w-full md:w-3/6">
           <div className="title-anim-bx">
-          <h1 className=" title-anim font-bold opacity-0 text-lg md:text-5xl text-blue">Fondation Roqya <br/> Côte d'ivoire  </h1>
+          <h1 className=" title-anim font-bold opacity-0 text-2xl md:text-5xl text-blue">Fondation Roqya <br/> Côte d'ivoire  </h1>
           </div>
           <div className="title-anim-bx">
             <p className=' title-anim opacity-0 text-sm md:text-2xl text-blue'>Guérit par le Coran et la médecine <br />prophétique</p>
           </div>
           <div className="blocage flex flex-wrap gap-2 w-full mt-4">
-          <div className="w-auto px-2 h-[38px] bg-white text-yellow shadow-lg rounded-md flex justify-center items-center"> <h5>sorcellerie</h5> </div>
-          <div className="w-auto px-2 h-[38px] bg-white text-yellow shadow-lg rounded-md flex justify-center items-center"> <h5>fétiche</h5> </div>
-          <div className="w-auto px-2 h-[38px] bg-white text-yellow shadow-lg rounded-md flex justify-center items-center"> <h5>demons</h5> </div>
-          <div className="w-auto px-2 h-[38px] bg-white text-yellow shadow-lg rounded-md flex justify-center items-center"> <h5>Djinns</h5> </div>
-          <div className="w-auto px-2 h-[38px] bg-white text-yellow shadow-lg rounded-md flex justify-center items-center"> <h5>cauchemars</h5> </div>
-          <div className="w-auto px-2 h-[38px] bg-white text-yellow shadow-lg rounded-md flex justify-center items-center"> <h5>blocage dans la vie</h5> </div>
-          <div className="w-auto px-2 h-[38px] bg-white text-yellow shadow-lg rounded-md flex justify-center items-center"> <h5>état mentaux</h5> </div>
-          <div className="w-auto px-2 h-[38px] bg-white text-yellow shadow-lg rounded-md flex justify-center items-center"> <h5>problème de santé anormaux</h5> </div>
-          <div className="w-auto px-2 h-[38px] bg-white text-yellow shadow-lg rounded-md flex justify-center items-center"> <h5>traitement sans distinction de race</h5> </div>
+          <div className="w-auto px-2 h-[38px] text-[14px] bg-white text-yellow shadow-lg rounded-md flex justify-center items-center"> <h5>sorcellerie</h5> </div>
+          <div className="w-auto px-2 h-[38px] text-[14px] bg-white text-yellow shadow-lg rounded-md flex justify-center items-center"> <h5>fétiche</h5> </div>
+          <div className="w-auto px-2 h-[38px] text-[14px] bg-white text-yellow shadow-lg rounded-md flex justify-center items-center"> <h5>demons</h5> </div>
+          <div className="w-auto px-2 h-[38px] text-[14px] bg-white text-yellow shadow-lg rounded-md flex justify-center items-center"> <h5>Djinns</h5> </div>
+          <div className="w-auto px-2 h-[38px] text-[14px] bg-white text-yellow shadow-lg rounded-md flex justify-center items-center"> <h5>cauchemars</h5> </div>
+          <div className="w-auto px-2 h-[38px] text-[14px] bg-white text-yellow shadow-lg rounded-md flex justify-center items-center"> <h5>blocage dans la vie</h5> </div>
+          <div className="w-auto px-2 h-[38px] text-[14px] bg-white text-yellow shadow-lg rounded-md flex justify-center items-center"> <h5>état mentaux</h5> </div>
+          <div className="w-auto px-2 h-[38px] text-[14px] bg-white text-yellow shadow-lg rounded-md flex justify-center items-center"> <h5>problème de santé anormaux</h5> </div>
+          <div className="w-auto px-2 h-[38px] text-[14px] bg-white text-yellow shadow-lg rounded-md flex justify-center items-center"> <h5>traitement sans distinction de race</h5> </div>
 
           </div>
 

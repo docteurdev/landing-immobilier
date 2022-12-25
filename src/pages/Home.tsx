@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { appsotre, flagCi, logo1, logo2, logo3, moreId1, moreId10, moreId11, moreId2, moreId3, moreId4, moreId5, moreId6, moreId7, moreId8, moreId9, playstore, topImg1, topImg2, topImg3, topImg4 } from '../assets'
-import { Cardfd, Cardnd, CardOne, Centre, ContactItem, Header, ProductDetail } from '../components';
-import { MdOutlineClose } from "react-icons/md"
+import { Cardfd, Cardnd, CardOne, Centre, ContactItem, Header, PatientItem, ProductDetail } from '../components';
+import { MdOutlineClose } from "react-icons/md";
+import { FaMosque, FaChurch } from "react-icons/fa";
+import { GiWorld } from "react-icons/gi";
+
 
 import { motion } from "framer-motion";
 import { data } from '../comon/data';
@@ -52,7 +55,34 @@ function Home() {
           </p>
         </div>
 
-        <h2 id="produits" className='font-bold text-lg mb-16 md:text-[30px] text-center text-blue' >Produits pour la <span className=''>roqya</span></h2>
+        <h2 id="centres" className='font-bold text-lg my-16 md:text-[30px] text-center text-blue' >Nos Patients</h2>
+        <div className="w-full py-5 h-auto md:h-48 overflow-hidden bg-gray-light-sm">
+          <motion.div
+            transition={{ ease: "backIn", duration: .3, delay: .3 }}
+            initial={{ y: 170 }}
+            whileInView={{ y: 0 }}
+            className="flex px-1 gap-7 md:gap-10 justify-center items-center flex-wrap  h-full w-full ">
+            <PatientItem
+              icon={<FaMosque />}
+              nbr={"15"}
+              label={"Musulman"}
+            />
+            <PatientItem
+              icon={<FaChurch />}
+              nbr={"100"}
+              label={"Chretients"}
+            />
+
+            <PatientItem
+              icon={<GiWorld />}
+              nbr={"29"}
+              label={"Autres réligions"}
+            />
+          </motion.div>
+
+        </div>
+
+        <h2 id="produits" className='font-bold text-lg my-16 md:text-[30px] text-center text-blue' >Produits pour la <span className=''>roqya</span></h2>
 
         <motion.div
           transition={{ delay: 0.3 }}
@@ -65,12 +95,12 @@ function Home() {
         </motion.div>
 
         <h2 id="centres" className='font-bold text-lg my-16 md:text-[30px] text-center text-blue' >Nos différents centres</h2>
-        <div className="w-full px- h-auto md:h-48 overflow-hidden bg-gray-light-sm">
+        <div className="w-full py-6 h-auto md:h-48 overflow-hidden bg-gray-light-sm">
           <motion.div
             transition={{ ease: "backIn", duration: .3, delay: .3 }}
             initial={{ y: 170 }}
             whileInView={{ y: 0 }}
-            className="flex px-1 gap-2 md:gap-10 justify-center flex-wrap  h-full w-full ">
+            className="flex px-1 gap-2 md:gap-10 justify-center  items-center flex-wrap  h-full w-full ">
             <Centre />
             <Centre />
             <Centre />
@@ -242,12 +272,14 @@ function Home() {
 
         </div> */}
       </main>
-      <footer className='flex p-2 flex-col md:flex-row justify-between flex-wrap items-center bg-blue w-full mt-[10rem] md:h-[67px] md:px-20' >
+      <footer className='flex p-2 flex-col md:flex-row justify-between flex-wrap md:items-center items-start bg-blue w-full mt-[10rem] md:h-[67px] md:px-20' >
         <h4 className='text-white font-normal text-2xl'>Fondation <span className='text-yellow' >Roqya C.I</span> </h4>
-        <ul className='flex flex-wrap gap-6 items-center text-white' >
+        <ul className='flex flex-wrap gap-2 md:gap-6 items-center text-white' >
           <li className='text-[14px]'>© 2020 Housesale Technologies Ltd.</li>
           <li className='text-[14px]'>1760 Dancing Dove Lane, New York, USA</li>
           <li className='text-[14px]'>sales@housesales.com</li>
+        </ul>
+        <ul className='flex flex-wrap gap-6  items-center'>
           <li>
             <img src={appsotre} width="100" alt="" />
           </li>
