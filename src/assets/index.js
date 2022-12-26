@@ -4,6 +4,7 @@ export {default as topImg1} from "../assets/other/topImg1.png";
 export {default as topImg2} from "../assets/other/topImg2.png";
 export {default as topImg3} from "../assets/other/topImg3.png";
 export {default as topImg4} from "../assets/other/topImg4.png";
+export {default as cheickSana} from "../assets/other/cheik-sana.png";
 
 export {default as coran1} from "../assets/other/coran1.jpg";
 export {default as coran2} from "../assets/other/coran2.jpg";

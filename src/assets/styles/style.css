@@ -34,11 +34,9 @@ header {
 .centre{
     width: 160px;
     height: 160px;
-    margin-top: 1rem;
-  border-radius: 10px;
-  background: #fff;
+    border-radius: 10px;
+    background: #fff;
     /* box-shadow: 27px 27px 54px #bcbcbc1f, -27px -27px 54px #ffffff; */
-
 }
 
 .title-anim-bx {
@@ -115,7 +113,8 @@ header > nav > ul > li {
 }
 
 .card-one:hover .bottom-block .bx-rounded {
-  background-color: #fff;
+  background-color: #FFF0CB;
+  color: #ffc839;
 }
 
 /* cardnd  fd*/

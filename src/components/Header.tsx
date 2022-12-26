@@ -6,7 +6,7 @@ import {AiFillCalendar} from "react-icons/ai";
 import {MdOutlineClose} from "react-icons/md"
 import { IconContext } from "react-icons";
 import { motion } from "framer-motion";
-import { banner, coran1, coran2, logo1, logoroqya } from '../assets';
+import { banner, cheickSana, coran1, coran2, logo1, logoroqya } from '../assets';
 
 
 
@@ -28,15 +28,16 @@ function Header() {
           <div className="nav flex justify-between items-center w-full">
           {/* <h4 className='text-blue font-normal md:text-2xl'>House<span className='text-yellow' >Sale</span> </h4> */}
           <img src={logoroqya} className="w-[10rem] h-[6rem] object-contain" alt="" />
-          <ul className='flex justify-between items-center text-blue gap-[5rem]' >
+          <ul className='flex justify-between items-center text-yellow gap-[5rem]' >
             <li><a href="#acceuil">Acceuil</a> </li>
-            <li><a href="#produits">Produits</a> </li>
-            <li><a href="#centres">Centres</a> </li>
-            <li><a href="#contact">Contact</a> </li>
+            <li><a href="#produits">Nos Produits</a> </li>
+            <li><a href="#livres">Nos Livres</a> </li>
+            <li><a href="#centres">Nos Centres</a> </li>
+            <li><a href="#contact">Nous Contacter</a> </li>
           </ul>
-            <a href="#start" className='bg-blue text-white px-6 py-2 rounded-full font-semibold'>Commander</a>
+            <a href="#start" className='bg-blue text-white px-6 py-2 rounded-full font-semibold'>C'est quoi la Roqya</a>
           </div>
-          <div className="lg:hidden text-blue ml-4">
+          <div className="lg:hidden text-gray ml-4">
           <IconContext.Provider value={{className:"text-[25px]"}}>
 
           <HiMenu onClick={() => {
@@ -67,9 +68,8 @@ function Header() {
 
           </div>
 
-          <button className=" bg-blue text-white px-9 py-3 font-semibold mt-5 rounded-md shadow-lg">
-            <a href="#start">Commencer</a>
-            </button>
+          <div className='w-[9rem] h-[2.5rem] shadow-lg bg-blue rounded-lg mt-4 px-2 font-bold text-white flex justify-start gap-4 items-center'> <AiFillCalendar/> <h5>7 jours / 7</h5> </div>
+
         </div>
 
         <div className="filter-section relative  w-full md:w-3/6 md:h-auto">
@@ -79,8 +79,7 @@ function Header() {
           {/* <div className='w-[6rem] h-[6rem] bg-slate-400 rounded-full absolute top-[3rem] right-[8rem] overflow-hidden'>
             <img className='w-full h-full object-cover' src={coran2} alt="" />
           </div> */}
-          <div className='w-[9rem] h-[2.5rem] shadow-lg bg-blue rounded-lg absolute top-[10rem] right-[4rem] px-2 font-bold text-white flex justify-start gap-4 items-center'> <AiFillCalendar/> <h5>7 jours / 7</h5> </div>
-          <img src={banner} className="w-full h-[400px] object-contain z-30" alt="" />
+          <img src={cheickSana} className="w-full h-[400px] object-contain z-30" alt="" />
         </div>
         </div>
 

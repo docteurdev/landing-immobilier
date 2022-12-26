@@ -29,7 +29,7 @@ const CardOne: React.FC<CardType>= ({produit}) =>{
      </div>
      <div
      className="bottom-block px-4 flex justify-start items-center w-full h-1/6 bg-white">
-        <div className="bx-rounded cursor-pointer bg-yellow w-8 h-8 rounded-full flex justify-center items-center shadow-xl mr-3">
+        <div className="bx-rounded cursor-pointer bg-yellow text-white w-8 h-8 rounded-full flex justify-center items-center shadow-xl mr-3">
             <FaChevronRight/>
         </div>
         <div>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { appsotre, flagCi, logo1, logo2, logo3, moreId1, moreId10, moreId11, moreId2, moreId3, moreId4, moreId5, moreId6, moreId7, moreId8, moreId9, playstore, topImg1, topImg2, topImg3, topImg4 } from '../assets'
+import { appsotre, banner, flagCi, logo1, logo2, logo3, moreId1, moreId10, moreId11, moreId2, moreId3, moreId4, moreId5, moreId6, moreId7, moreId8, moreId9, playstore, topImg1, topImg2, topImg3, topImg4 } from '../assets'
 import { Cardfd, Cardnd, CardOne, Centre, ContactItem, Header, PatientItem, ProductDetail } from '../components';
 import { MdOutlineClose } from "react-icons/md";
 import { FaMosque, FaChurch } from "react-icons/fa";
@@ -35,9 +35,10 @@ function Home() {
                 <MdOutlineClose />
               </div>
 
-              <ul className='mobile-menu' >
+              <ul className='mobile-menu text-yellow' >
                 <li onClick={closeMobileMenu} ><a href="#acceuil">Acceuil</a> </li>
                 <li onClick={closeMobileMenu} ><a href="#produits">Produits</a> </li>
+                <li onClick={closeMobileMenu} ><a href="#livres">Livres</a> </li>
                 <li onClick={closeMobileMenu} ><a href="#centres">Centres</a> </li>
                 <li onClick={closeMobileMenu} ><a href="#contact">Contact</a> </li>
               </ul>
@@ -48,24 +49,36 @@ function Home() {
 
         {/* mobile menu end */}
 
-        <div id="start" className="w-full md:w-4/6 mx-auto px-4 md:mt-10  mb-16 ">
-          <h2 className='font-bold text-lg  md:text-[30px] text-center text-blue' >C'est quoi la <span className=''>roqya?</span></h2>
-          <p className='text-md text-muted mt-10  text-justify'>
-            La roqya est la guérison et le soulagement de gens qui souffrent et sont bloqués depuis des années. Deuxièmement c'est une protection des musulmans contre le chirk et un renforcement de leur foi. Troisièmement c'est une porte de daâwa pour les non musulmans. Quatrièmement, c'est un combat contre les sorciers, satanistes, féticheurs, voyants, et leurs associés et toutes formes de chirk jusqu'à ce que ça disparaisse totalement.
-          </p>
+        <div id="start" className="w-full md:w-4/6 mx-auto px-4 md:mt-10  md:mb-[5rem] ">
+          <h2 className='font-bold text-lg md:my-[5rem] md:text-[30px] text-center text-blue' >C'est quoi la <span className=''>roqya?</span></h2>
+          <div className="flex flex-col md:flex-row justify-center md:items-center md:shadow-none shadow-sm p-3 ">
+            <div
+              className="w-full flex justify-center items-center md:w-2/6  p-2"
+            >
+              <div className="w-[170px] h-[170px] rounded-full shadow-md flex justify-center items-center overflow-hidden">
+
+              <img src={banner} className="w-full h-full" alt="" />
+              </div>
+            </div>
+            <div className="w-full md:w-4/6">
+              <p className='text-md text-muted  text-justify'>
+                La roqya est la guérison et le soulagement de gens qui souffrent et sont bloqués depuis des années. Deuxièmement c'est une protection des musulmans contre le chirk et un renforcement de leur foi. Troisièmement c'est une porte de daâwa pour les non musulmans. Quatrièmement, c'est un combat contre les sorciers, satanistes, féticheurs, voyants, et leurs associés et toutes formes de chirk jusqu'à ce que ça disparaisse totalement.
+              </p>
+            </div>
+          </div>
         </div>
 
-        <h2 id="centres" className='font-bold text-lg my-16 md:text-[30px] text-center text-blue' >Nos Patients</h2>
-        <div className="w-full py-5 h-auto md:h-48 overflow-hidden bg-gray-light-sm">
+        <h2 id="centres" className='font-bold text-lg my-8 md:my-[5rem] md:text-[30px] text-center text-blue' >Nos Patients</h2>
+        <div className="w-full py-5 h-auto md:h-48 overflow-hidden bg-gray-light-sm rounded-lg md:rounded-none">
           <motion.div
             transition={{ ease: "backIn", duration: .3, delay: .3 }}
-            initial={{ y: 170 }}
-            whileInView={{ y: 0 }}
+            initial={{ y: 70, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
             className="flex px-1 gap-7 md:gap-10 justify-center items-center flex-wrap  h-full w-full ">
             <PatientItem
               icon={<FaMosque />}
               nbr={"15"}
-              label={"Musulman"}
+              label={"Musulmans"}
             />
             <PatientItem
               icon={<FaChurch />}
@@ -82,11 +95,11 @@ function Home() {
 
         </div>
 
-        <h2 id="produits" className='font-bold text-lg my-16 md:text-[30px] text-center text-blue' >Produits pour la <span className=''>roqya</span></h2>
+        <h2 id="produits" className='font-bold text-lg my-8 md:my-[5rem] md:text-[30px] text-center text-blue' >Nos produits pour la <span className=''>roqya</span></h2>
 
         <motion.div
           transition={{ delay: 0.3 }}
-          initial={{ y: 150 }}
+          initial={{ y: 150, opacity: 0 }}
           whileInView={{ opacity: 1, y: 0 }}
           className="flex justify-center flex-wrap opacity-0 md:justify-between gap-2 h-auto">
           {data.map((produit) => <CardOne key={produit.id.toString()} produit={produit} />)}
@@ -94,12 +107,24 @@ function Home() {
 
         </motion.div>
 
-        <h2 id="centres" className='font-bold text-lg my-16 md:text-[30px] text-center text-blue' >Nos différents centres</h2>
-        <div className="w-full py-6 h-auto md:h-48 overflow-hidden bg-gray-light-sm">
+      <h2 id="livres" className='font-bold text-lg my-8 md:my-[5rem] md:text-[30px] text-center text-blue' >Nos livres <span className=''>roqya</span></h2>
+
+      <motion.div
+        transition={{ delay: 0.3 }}
+        initial={{ y: 150, opacity: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="flex justify-center flex-wrap opacity-0 md:justify-between gap-2 h-auto">
+        {data.map((produit) => <CardOne key={produit.id.toString()} produit={produit} />)}
+
+
+      </motion.div>
+
+        <h2 id="centres" className='font-bold text-lg my-8 md:my-[5rem] md:text-[30px] text-center text-blue' >Nos différents centres</h2>
+        <div className="w-full py-2 h-auto md:h-48 overflow-hidden bg-gray-light-sm">
           <motion.div
             transition={{ ease: "backIn", duration: .3, delay: .3 }}
-            initial={{ y: 170 }}
-            whileInView={{ y: 0 }}
+            initial={{ y: 70, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
             className="flex px-1 gap-2 md:gap-10 justify-center  items-center flex-wrap  h-full w-full ">
             <Centre />
             <Centre />
@@ -108,7 +133,7 @@ function Home() {
           </motion.div>
 
         </div>
-        <h2 id="contact" className='font-bold text-lg my-16 md:text-[30px] text-center text-blue' >Contacts</h2>
+        <h2 id="contact" className='font-bold text-lg my-5 md:my-[5rem] md:text-[30px] text-center text-blue' >Contacts</h2>
 
         <div className="w-full flex h-96 flex-col md:flex-row justify-center gap-2  mx-auto">
           <div className="w-full md:w-2/6 h-full flex flex-col justify-center bg-gray-light-sm p-4 rounded-lg">
@@ -272,17 +297,21 @@ function Home() {
 
         </div> */}
       </main>
-      <footer className='flex p-2 flex-col md:flex-row justify-between flex-wrap md:items-center items-start bg-blue w-full mt-[10rem] md:h-[67px] md:px-20' >
+      <footer className='flex p-2 flex-col md:flex-row justify-between flex-wrap md:items-center items-start bg-blue w-full mt-[10rem] md:h-[130px] md:px-20' >
         <h4 className='text-white font-normal text-2xl'>Fondation <span className='text-yellow' >Roqya C.I</span> </h4>
-        <ul className='flex flex-wrap gap-2 md:gap-6 items-center text-white' >
-          <li className='text-[14px]'>© 2020 Housesale Technologies Ltd.</li>
-          <li className='text-[14px]'>1760 Dancing Dove Lane, New York, USA</li>
-          <li className='text-[14px]'>sales@housesales.com</li>
+        <ul className='fle flex-wrap gap-2 md:gap-6 items-center text-white' >
+          <h4 className='font-bold' >Liens utiles</h4>
+          <li className='text-[14px]'><a href="#produits">Produits</a> </li>
+          <li className='text-[14px]'><a href="#livres">Livres</a> </li>
+          <li className='text-[14px]'><a href="#centres">Centres</a> </li>
+        </ul>
+        <ul className='fle flex-wrap gap-2 md:gap-6 items-center text-white' >
+          <h4 className='font-bold' >Nos Centres</h4>
+          <li className='text-[14px]'>Yopougon (+225 15485655566) </li>
+          <li className='text-[14px]'>Abobo (+225 15485655566) </li>
+          <li className='text-[14px]'>Koumassi (+225 15485655566) </li>
         </ul>
         <ul className='flex flex-wrap gap-6  items-center'>
-          <li>
-            <img src={appsotre} width="100" alt="" />
-          </li>
           <li>
             <img src={playstore} width="100" alt="" />
           </li>
