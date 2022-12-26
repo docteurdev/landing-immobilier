@@ -7,7 +7,7 @@ import { GiWorld } from "react-icons/gi";
 
 
 import { motion } from "framer-motion";
-import { data } from '../comon/data';
+import { data, livres } from '../comon/data';
 
 
 function Home() {
@@ -61,7 +61,7 @@ function Home() {
               </div>
             </div>
             <div className="w-full md:w-4/6">
-              <p className='text-md text-muted  text-justify'>
+              <p className='text-[14px] md:text-lg text-yellow   text-justify'>
                 La roqya est la guérison et le soulagement de gens qui souffrent et sont bloqués depuis des années. Deuxièmement c'est une protection des musulmans contre le chirk et un renforcement de leur foi. Troisièmement c'est une porte de daâwa pour les non musulmans. Quatrièmement, c'est un combat contre les sorciers, satanistes, féticheurs, voyants, et leurs associés et toutes formes de chirk jusqu'à ce que ça disparaisse totalement.
               </p>
             </div>
@@ -101,7 +101,7 @@ function Home() {
           transition={{ delay: 0.3 }}
           initial={{ y: 150, opacity: 0 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="flex justify-center flex-wrap opacity-0 md:justify-between gap-2 h-auto">
+          className="flex justify-center flex-wrap opacity-0 md:justify-right gap-2 h-auto">
           {data.map((produit) => <CardOne key={produit.id.toString()} produit={produit} />)}
 
 
@@ -114,7 +114,7 @@ function Home() {
         initial={{ y: 150, opacity: 0 }}
         whileInView={{ opacity: 1, y: 0 }}
         className="flex justify-center flex-wrap opacity-0 md:justify-between gap-2 h-auto">
-        {data.map((produit) => <CardOne key={produit.id.toString()} produit={produit} />)}
+        {livres.map((produit) => <CardOne key={produit.id.toString()} produit={produit} />)}
 
 
       </motion.div>

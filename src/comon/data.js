@@ -1,4 +1,4 @@
-import { moreId1, moreId2, moreId3, moreId4, moreId5, moreId6, moreId7, moreId8, moreId9 } from "../assets";
+import { livre1, livre2, livre3, livre4, moreId1, moreId2, moreId3, moreId4, moreId5, moreId6, moreId7, moreId8, moreId9 } from "../assets";
 
 export const data = [
   { 
@@ -48,21 +48,41 @@ export const data = [
     description: "Le cum reiciendis architecto aliquam at dolorum nulla magni tenetur aliquid nobis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde cum reiciendis architecto aliquam at dolorum nulla magni tenetur aliquid nobis?"
 
    },
-   {
-    id:7,
-    image:moreId7,
-    productName:"produit 7",
-    prix: "4000",
-    description: " Unde cum reiciendis architecto aliquam at dolorum nulla magni tenetur aliquid nobis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde cum reiciendis architecto aliquam at dolorum nulla magni tenetur aliquid nobis?"
-
-   },
-   {
-    id:8,
-    image:moreId8,
-    productName:"produit 8",
-    prix: "10000",
-    description: "Lor122222 nobis?"
-
-   },
    
 ];
+
+export const livres=[
+  {
+    id:1,
+    image:livre1,
+    productName:"livre 1",
+    prix: "1000",
+    description: "Le cum reiciendis architecto aliquam at dolorum nulla magni tenetur aliquid nobis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde cum reiciendis architecto aliquam at dolorum nulla magni tenetur aliquid nobis?"
+
+   },
+   {
+    id:2,
+    image:livre2,
+    productName:"livre 2",
+    prix: "5000",
+    description: "Le cum reiciendis architecto aliquam at dolorum nulla magni tenetur aliquid nobis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde cum reiciendis architecto aliquam at dolorum nulla magni tenetur aliquid nobis?"
+
+   },
+   {
+    id:3,
+    image:livre3,
+    productName:"livre 3",
+    prix: "600",
+    description: "Le cum reiciendis architecto aliquam at dolorum nulla magni tenetur aliquid nobis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde cum reiciendis architecto aliquam at dolorum nulla magni tenetur aliquid nobis?"
+
+   },
+   {
+    id:4,
+    image:livre4,
+    productName:"livre",
+    prix: "25000",
+    description: "Le cum reiciendis architecto aliquam at dolorum nulla magni tenetur aliquid nobis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde cum reiciendis architecto aliquam at dolorum nulla magni tenetur aliquid nobis?"
+
+   },
+
+]
