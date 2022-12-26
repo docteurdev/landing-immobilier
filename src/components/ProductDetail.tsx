@@ -34,7 +34,7 @@ const  ProductDetail = ()=> {
                    <div className="w-full p-4 md:w-5/6 bg-white h-full">
                     <h3 className='text-3xl font-thin text-blue'> {cartInfo.productName} </h3>
                    
-                    <div className="flex flex-col md:flex-row w-full h-full">
+                    <div className="flex flex-col md:flex-row w-full  h-full">
                     <div className="w-full md:w-2/4">
                     {/* <button className="px-5 py-3  bg-blue text-white rounded-lg font-semibold text-[14px]">Achèter</button> */}
                     <p className='text-muted text-left text-[14px]' >
@@ -42,7 +42,7 @@ const  ProductDetail = ()=> {
                     </p>
                     </div>
                     <div className="w-full h-[70%] md:w-2/4 md:h-4/5 rounded-lg overflow-hidden">
-                    <img src={cartInfo.image} className="w-full h-full object-cover" alt="" />
+                    <img src={cartInfo.image} className="w-full h-full object-scale-down " alt="" />
 
                     </div>
 

@@ -55,7 +55,7 @@ function Home() {
             <div
               className="w-full flex justify-center items-center md:w-2/6  p-2"
             >
-              <div className="w-[170px] h-[170px] rounded-full shadow-md flex justify-center items-center overflow-hidden">
+              <div className="w-[170px] h-[170px] flex justify-center items-center ">
 
               <img src={banner} className="w-full h-full" alt="" />
               </div>
