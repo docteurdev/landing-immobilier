@@ -12,7 +12,8 @@ module.exports = {
         'muted':'#606060',
         'gray': '#323232',
         'gray-light': '#4A4A4A',
-        'gray-light-sm': '#dcdcdc57'
+        'gray-light-sm': '#dcdcdc57',
+        'white-blur':'#ffffff42'
       },
       fontSize: {
         // 'sm': '0.8rem',

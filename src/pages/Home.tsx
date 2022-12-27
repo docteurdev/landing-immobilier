@@ -36,7 +36,7 @@ function Home() {
               </div>
 
               <ul className='mobile-menu text-yellow' >
-                <li onClick={closeMobileMenu} ><a href="#acceuil">Acceuil</a> </li>
+                <li onClick={closeMobileMenu} ><a href="#acceuil">Accueil</a> </li>
                 <li onClick={closeMobileMenu} ><a href="#produits">Produits</a> </li>
                 <li onClick={closeMobileMenu} ><a href="#livres">Livres</a> </li>
                 <li onClick={closeMobileMenu} ><a href="#centres">Centres</a> </li>

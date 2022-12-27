@@ -24,12 +24,12 @@ function Header() {
            <MdOutlineClose onClick={() => setMenu(false)} />
         </IconContext.Provider>
       </div>: null}
-        <nav className='w-full fixed top-0 left-0 h-[50px] md:px-[7rem] md:h-[70px] backdrop-blur-2xl flex justify-between items-center  z-30 shadow-'>
+        <nav className='w-full bg-white-blur fixed top-0 left-0 h-[50px] md:px-[7rem] md:h-[70px] backdrop-blur-2xl flex justify-between items-center  z-30 shadow-'>
           <div className="nav flex justify-between items-center w-full">
           {/* <h4 className='text-blue font-normal md:text-2xl'>House<span className='text-yellow' >Sale</span> </h4> */}
           <img src={logoroqya} className="w-[10rem] h-[6rem] object-contain" alt="" />
           <ul className='flex justify-between items-center text-yellow gap-[5rem]' >
-            <li><a href="#acceuil">Acceuil</a> </li>
+            <li><a href="#acceuil">Accueil</a> </li>
             <li><a href="#produits">Nos Produits</a> </li>
             <li><a href="#livres">Nos Livres</a> </li>
             <li><a href="#centres">Nos Centres</a> </li>
